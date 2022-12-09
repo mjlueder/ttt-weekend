@@ -28,7 +28,7 @@ let board, turn, winner, tie
   
   
 const squareEls = document.querySelectorAll('.sqr')
-console.log(squareEls);
+// console.log(squareEls);
 const messageEl = document.getElementById('message')
 // console.log(messageEl);
 
@@ -66,20 +66,30 @@ function init(){
 init()  // is this right?
 
 function render(){
-
+  updateBoard()
+  updateMessage()
 }
 
 function updateBoard(){
-  squareEls.forEach(function(sqr){
-    // console.dir(sqr);
+  board.forEach(function(i){
+    console.dir(i);
+    console.log(squareEls);
     // console.log(sqr.nodeValue);
-    if (sqr.nodeValue === null) { sqr.textContent = 'Nu'} 
-    if (sqr.nodeValue === 1) { sqr.textContent = 'Po' }
-    if (sqr.nodeValue === -1) { sqr.textContent = 'Ne' }
+    if (i === null) { squareEls.textContent = 'Nu'} 
+    if (i === 1) { squareEls[i] = 'Po' }
+    if (i === -1) { squareEls[i] = 'Ne' }
   })
 }
 
-// updateBoard()
+function updateMessage() {
+  if (winner === false && tie === false){
+    messageEl.textContent = `It is ${turn}'s turn`
+  } else if (winner === false && tie === true) {
+    messageEl.textContent = `It's a tie!`
+  } else {
+    messageEl.textContent = `Player ${turn} won!`
+  }
+}
 
 // Step 4 - The state of the game should be rendered to the user
 
