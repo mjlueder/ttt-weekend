@@ -133,15 +133,6 @@ function checkForTie(){
 // checkForTie()
 // console.log(tie);
 
-// function checkForWinner(){
-//   winningCombos.forEach(function(combo){
-//     let sum = combo.reduce(function(prev, num) {
-//       return prev + num
-//     }, 0)
-//     if (sum === 3) winner = true
-//   })
-// }
-
 function checkForWinner(){
     winningCombos.forEach(function(combo){
       let sum = 0
@@ -159,6 +150,11 @@ function checkForWinner(){
 
 // checkForWinner()
 
+function switchPlayerTurn(){
+  if (winner === true) return
+  turn = turn * -1
+  console.log(turn);
+}
 
 
 // Step 4 - The state of the game should be rendered to the user
