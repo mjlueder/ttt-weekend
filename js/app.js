@@ -105,6 +105,7 @@ function updateMessage() {
     messageEl.textContent = `It's a tie! 🫠`
   } else {
     messageEl.textContent = `Player ${letter} won!`
+    confetti.start(2000)
   }
 }
 
