@@ -42,15 +42,18 @@ const messageEl = document.getElementById('message')
 // console.log(messageEl);
 const boardEl = document.querySelector('.board')
 // console.log(boardEl);
+const resetBtnEl = document.querySelector('.reset')
+// console.log(resetBtnEl);
 
 /*----------------------------- Event Listeners -----------------------------*/
 
 boardEl.addEventListener('click', handleClick)
+resetBtnEl.addEventListener('click', init)
 
 /*-------------------------------- Functions --------------------------------*/
 
 function init(){
-  board = [1, -1, 1, null, null, null, null, null, null]
+  board = [null, null, null, null, null, null, null, null, null]
   turn = -1
   winner = false
   tie = false
@@ -160,7 +163,7 @@ function checkForWinner(){
 function switchPlayerTurn(){
   if (winner === true) return
   turn = turn * -1
-  console.log(turn);
+  // console.log(turn);
 }
 
 
