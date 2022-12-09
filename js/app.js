@@ -93,12 +93,15 @@ function updateBoard(){
 }
 
 function updateMessage() {
+  let letter
+  if (turn === -1) letter = 'X'
+  if (turn === 1) letter = 'O'
   if (winner === false && tie === false){
-    messageEl.textContent = `It is ${turn}'s turn`
+    messageEl.textContent = `It is ${letter}'s turn`
   } else if (winner === false && tie === true) {
     messageEl.textContent = `It's a tie!`
   } else {
-    messageEl.textContent = `Player ${turn} won!`
+    messageEl.textContent = `Player ${letter} won!`
   }
 }
 
@@ -115,6 +118,10 @@ function handleClick(evt){
   if (board[sqIdx] !== null) return
   if (winner === true) return
   placePiece(sqIdx)
+  checkForTie()
+  checkForWinner()
+  switchPlayerTurn()
+  render()
 }
 
 function placePiece(idx) {
