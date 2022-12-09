@@ -40,15 +40,17 @@ const squareEls = document.querySelectorAll('.sqr')
 // console.dir(squareEls);
 const messageEl = document.getElementById('message')
 // console.log(messageEl);
+const boardEl = document.querySelector('.board')
+// console.log(boardEl);
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-
+boardEl.addEventListener('click', handleClick)
 
 /*-------------------------------- Functions --------------------------------*/
 
 function init(){
-  board = [null, null, null, null, null, null, null, null, null]
+  board = [1, -1, null, null, null, null, null, null, null]
   turn = -1
   winner = false
   tie = false
@@ -84,7 +86,7 @@ function updateBoard(){
     // console.dir(sqr);
     // console.log(idx);
     // console.log(squareEls[idx]);
-    if (sqr === null) { squareEls[idx].textContent = 'Nu'} 
+    if (sqr === null) { squareEls[idx].textContent = ''} 
     if (sqr === 1) { squareEls[idx].textContent = '0' }
     if (sqr === -1) { squareEls[idx].textContent = 'X' }
   })
@@ -99,6 +101,22 @@ function updateMessage() {
     messageEl.textContent = `Player ${turn} won!`
   }
 }
+
+// winner = true
+// tie = true
+// updateMessage()
+
+function handleClick(evt){
+  // console.log(evt.target.id[2]);
+  // console.dir(evt.target);
+  // console.log(evt.target.textContent);
+  let sqIdx = evt.target.id[2]
+  // console.log(board[sqIdx]);
+  if (board[sqIdx] !== null) return
+  if (winner === true) return
+
+}
+
 
 // Step 4 - The state of the game should be rendered to the user
 
