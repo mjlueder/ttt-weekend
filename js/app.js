@@ -114,7 +114,12 @@ function handleClick(evt){
   // console.log(board[sqIdx]);
   if (board[sqIdx] !== null) return
   if (winner === true) return
+  placePiece(sqIdx)
+}
 
+function placePiece(idx) {
+  board[idx] = turn
+  // console.log('board idx', idx, board[idx]);
 }
 
 
