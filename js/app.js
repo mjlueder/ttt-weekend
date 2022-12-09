@@ -122,6 +122,18 @@ function placePiece(idx) {
   // console.log('board idx', idx, board[idx]);
 }
 
+function checkForTie(){
+  let checkTie = board.every(function(value){
+    return value !== null
+  })
+  tie = checkTie
+  // console.log(tie);
+}
+
+// checkForTie()
+// console.log(tie);
+
+
 
 // Step 4 - The state of the game should be rendered to the user
 
