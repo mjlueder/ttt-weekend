@@ -50,7 +50,7 @@ boardEl.addEventListener('click', handleClick)
 /*-------------------------------- Functions --------------------------------*/
 
 function init(){
-  board = [1, -1, null, null, null, null, null, null, null]
+  board = [1, -1, 1, null, null, null, null, null, null]
   turn = -1
   winner = false
   tie = false
@@ -132,6 +132,32 @@ function checkForTie(){
 
 // checkForTie()
 // console.log(tie);
+
+// function checkForWinner(){
+//   winningCombos.forEach(function(combo){
+//     let sum = combo.reduce(function(prev, num) {
+//       return prev + num
+//     }, 0)
+//     if (sum === 3) winner = true
+//   })
+// }
+
+function checkForWinner(){
+    winningCombos.forEach(function(combo){
+      let sum = 0
+      combo.forEach(function(sqr){
+        // console.log(board[sqr])
+        sum += board[sqr]
+      })
+      // console.log('sum ', sum);
+      sum = Math.abs(sum)
+      // console.log('abs ', sum);
+      if (sum === 3) winner = true
+      // console.log(winner);
+    })
+  }
+
+// checkForWinner()
 
 
 
