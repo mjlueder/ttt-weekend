@@ -28,7 +28,7 @@ let board, turn, winner, tie
   
   
 const squareEls = document.querySelectorAll('.sqr')
-// console.log(squareEls);
+// console.dir(squareEls);
 const messageEl = document.getElementById('message')
 // console.log(messageEl);
 
@@ -71,13 +71,13 @@ function render(){
 }
 
 function updateBoard(){
-  board.forEach(function(i){
-    console.dir(i);
-    console.log(squareEls);
-    // console.log(sqr.nodeValue);
-    if (i === null) { squareEls.textContent = 'Nu'} 
-    if (i === 1) { squareEls[i] = 'Po' }
-    if (i === -1) { squareEls[i] = 'Ne' }
+  board.forEach(function(sqr, idx){
+    // console.dir(sqr);
+    // console.log(idx);
+    // console.log(squareEls[idx]);
+    if (sqr === null) { squareEls[idx].textContent = 'Nu'} 
+    if (sqr === 1) { squareEls[idx].textContent = '0' }
+    if (sqr === -1) { squareEls[idx].textContent = 'X' }
   })
 }
 
