@@ -2,8 +2,8 @@ body {
   background-image: url("https://as2.ftcdn.net/v2/jpg/02/24/71/47/1000_F_224714741_WVkjdAp3YeNoobaZtd3gCl6c16U35ABR.jpg");
   background-color: cornflowerblue;
 	/* Use a system font, if none are available use an available sans-sarif   font */
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: 'Chicle', cursive; 
+  /* "Helvetica Neue", sans-serif; */
 	margin: 0;
   height: 100vh;
   display: flex;
@@ -28,6 +28,7 @@ div {
 button {
   width: 150px;
   margin: 30px;
+  font-family: 'Chicle', cursive; 
 }
 
 h1, h2 {
