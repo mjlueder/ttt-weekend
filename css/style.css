@@ -75,3 +75,12 @@ h2 {
 .sqr:hover {
   background-color: burlywood;
 }
+
+@media (max-width: 800px) { 
+  h1 {
+    font-size: 65px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+}

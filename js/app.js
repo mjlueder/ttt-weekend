@@ -134,3 +134,4 @@ function switchPlayerTurn(){
   turn = turn * -1
   // console.log(turn);
 }
+
