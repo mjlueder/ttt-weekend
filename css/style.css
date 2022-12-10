@@ -7,7 +7,6 @@ html, body {
 body {
   background-image: url("https://as2.ftcdn.net/v2/jpg/02/24/71/47/1000_F_224714741_WVkjdAp3YeNoobaZtd3gCl6c16U35ABR.jpg");
   background-color: cornflowerblue;
-	/* Use a system font, if none are available use an available sans-sarif   font */
 	font-family: 'Chicle', cursive; 
   /* "Helvetica Neue", sans-serif; */
 	margin: 0;
@@ -46,11 +45,14 @@ button {
   margin: 30px;
   font-family: 'Chicle', cursive; 
   font-size: 30px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px black;
 }
 
 h1, h2 {
   background-color: cornflowerblue;
   color: blanchedalmond;
+  border: solid darkblue 2px;
 }
 
 h1 {
@@ -58,6 +60,7 @@ h1 {
   padding: 20px;
   margin: 25px 0;
   border-radius: 20px;
+  box-shadow: 10px 10px 5px darkblue;
 }
 
 h2 {
@@ -65,4 +68,5 @@ h2 {
   padding: 15px;
   margin: 0 0 30px 0;
   border-radius: 15px;
+  box-shadow: 7px 7px 3px darkblue;
 }
