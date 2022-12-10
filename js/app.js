@@ -13,28 +13,9 @@ const winningCombos = [
 
 /*---------------------------- Variables (state) ----------------------------*/
 
-// Step 1 - Define the required variables used to track the state of the game
-
-  // 1a) Use a variable named `board` to represent the state of the squares on
-  //     the board.
-
-  // 1b) Use a variable named `turn` to track whose turn it is.
-
-  // 1c) Use a variable named `winner` to represent if anyone has won yet.
-
-  // 1d) Use a variable named `tie` to represent if the game has ended in a tie.
-
 let board, turn, winner, tie
 
 /*------------------------ Cached Element References ------------------------*/
-// Step 2 - Store cached element references.
-
-  // 2a) In a constant called `squareEls`, store the nine elements 
-  //    representing the squares on the page.
-
-  // 2b) In a constant called `messageEl`, store the element that displays the 
-  //    game's status on the page.
-  
   
 const squareEls = document.querySelectorAll('.sqr')
 // console.dir(squareEls);
@@ -60,23 +41,6 @@ function init(){
   tie = false
   render()
 }
-// Step 3 - Upon loading, the game state should be initialized, and a function 
-//          should be called to render this game state.
-
-  // 3a) Create a function called `init`.
-  
-  // 3c) Set the `board` variable to an array containing nine `null`s to 
-  //    represent empty squares.
-
-  // 3d) Set the `turn` to `1` - which will represent player X.
-
-  // 3e) Set the `winner` to false.
-
-  // 3f) Set `tie` to false.
-
-  // 3g) Call a function called `render` at the end of the `init` function.
-
-// 3b) Call this `init` function when the app loads.
 
 init()  // is this right?
 
