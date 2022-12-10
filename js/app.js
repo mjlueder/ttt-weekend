@@ -50,6 +50,7 @@ const resetBtnEl = document.querySelector('.reset')
 boardEl.addEventListener('click', handleClick)
 resetBtnEl.addEventListener('click', init)
 
+
 /*-------------------------------- Functions --------------------------------*/
 
 function init(){
@@ -119,7 +120,10 @@ function handleClick(evt){
   // console.log(evt.target.textContent);
   let sqIdx = evt.target.id[2]
   // console.log(board[sqIdx]);
-  if (board[sqIdx] !== null) return
+  if (board[sqIdx] !== null) {
+    evt.target.classList.add('animate__animated', 'animate__headShake')
+    return
+  }
   if (winner === true) return
   placePiece(sqIdx)
   checkForTie()
