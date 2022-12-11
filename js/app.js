@@ -42,7 +42,7 @@ function init(){
   render()
 }
 
-init()  // is this right?
+init()  
 
 function render(){
   updateBoard()
