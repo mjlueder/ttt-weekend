@@ -6,6 +6,7 @@ html, body {
 
 body {
   background-image: url("https://as2.ftcdn.net/v2/jpg/02/24/71/47/1000_F_224714741_WVkjdAp3YeNoobaZtd3gCl6c16U35ABR.jpg");
+  background-size: cover;
   background-color: cornflowerblue;
 	font-family: 'Chicle', cursive; 
   /* "Helvetica Neue", sans-serif; */
