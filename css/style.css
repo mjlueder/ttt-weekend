@@ -1,5 +1,6 @@
 html, body {
-  display: flex;
+  /* display: flex; */
+  /* for some reason commenting out the above line fixed the confetti issue */
   justify-content: center;
   height: 100%;
 }

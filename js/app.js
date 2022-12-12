@@ -47,6 +47,10 @@ init()
 function render(){
   updateBoard()
   updateMessage()
+  squareEls.forEach(function(sqr){
+    if (sqr.classList.contains('animate__animated', 'animate__headShake'))
+    sqr.classList.remove('animate__animated', 'animate__headShake')
+  })
 }
 
 function updateBoard(){
@@ -70,7 +74,7 @@ function updateMessage() {
     messageEl.textContent = `It's a tie! 🫠`
   } else {
     messageEl.textContent = `Player ${letter} won!`
-    confetti.start(2000)
+    confetti.start(2500)
   }
 }
 
