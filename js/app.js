@@ -34,6 +34,8 @@ resetBtnEl.addEventListener('click', init)
 
 /*-------------------------------- Functions --------------------------------*/
 
+init()  
+
 function init(){
   board = [null, null, null, null, null, null, null, null, null]
   turn = -1
@@ -41,8 +43,6 @@ function init(){
   tie = false
   render()
 }
-
-init()  
 
 function render(){
   updateBoard()
@@ -86,9 +86,10 @@ function handleClick(evt){
   // console.log(evt.target.id[2]);
   // console.dir(evt.target);
   // console.log(evt.target.textContent);
-  let sqIdx = evt.target.id[2]
-  // console.log(board[sqIdx]);
-  if (board[sqIdx] !== null) {
+  let sqIdx = Number(evt.target.id[2])
+  // console.log(sqIdx);
+  if (isNaN(sqIdx)) return
+  if (board[sqIdx]) {
     evt.target.classList.add('animate__animated', 'animate__headShake')
     return
   }
@@ -113,6 +114,8 @@ function checkForTie(){
   // console.log(tie);
 }
 
+// alt: if (board.includes(null)) return
+//      tie = true
 // checkForTie()
 // console.log(tie);
 
@@ -135,7 +138,7 @@ function checkForWinner(){
 
 function switchPlayerTurn(){
   if (winner === true) return
-  turn = turn * -1
+  turn *= -1
   // console.log(turn);
 }
 
